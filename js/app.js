@@ -19,7 +19,7 @@ let board = [
     '','','',
     '','',''
     ];
-let turn;
+let turn = 'X';
 let winner;
 let tie;
 /*---------------------------- Variables (state) ----------------------------*/
