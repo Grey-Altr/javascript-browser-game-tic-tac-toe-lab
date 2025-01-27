@@ -22,7 +22,7 @@ let board = [
 
 /*---------------------------- Variables (state) ----------------------------*/
 
-let turn = ['X', 'O'];
+let turn = 'X';
 let winner = false;
 let tie = false;
 
@@ -40,9 +40,12 @@ const render = () => {
 };
 
 const updateBoard = (board, squareEls) => {
-    board.forEach(() => {
+    board.forEach((turn, index) => {
+        const square = squareEls[index];
+        square.textContent = turn;
 
-    })
+        if (board)
+    });
 };
 
 /*----------------------------- Event Listeners -----------------------------*/
