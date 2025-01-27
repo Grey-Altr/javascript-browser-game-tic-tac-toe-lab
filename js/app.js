@@ -19,6 +19,12 @@ let turn;
 let winner;
 let tie;
 /*---------------------------- Variables (state) ----------------------------*/
+const init = () => {
+    console.log('game init');
+}
+
+init();
+
 
 /*------------------------ Cached Element References ------------------------*/
 const squareEls = document.querySelectorAll('#sqr');
