@@ -26,7 +26,7 @@ let tie = false;
 const init = () => {
     console.log('game init');
     render();
-}
+};
 
 init();
 
@@ -35,5 +35,7 @@ init();
 const squareEls = document.querySelectorAll('#sqr');
 const messageEl = document.querySelector('#message');
 /*-------------------------------- Functions --------------------------------*/
-
+const render = () => {
+    
+};
 /*----------------------------- Event Listeners -----------------------------*/
