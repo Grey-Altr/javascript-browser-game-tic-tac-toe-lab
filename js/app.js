@@ -27,12 +27,9 @@ let winner = false;
 let tie = false;
 
 const init = () => {
-    console.log('game init');
+    window.onload = init;
     render();
 };
-
-init();
-
 
 /*------------------------ Cached Element References ------------------------*/
 const squareEls = document.querySelectorAll('#sqr');
