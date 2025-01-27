@@ -20,6 +20,16 @@ let board = [
     '','',''
     ];
 
+const winningCombos = [
+    [0, 1, 2],
+    [3, 4, 5],
+    [6, 7, 8],
+    [0, 3, 6],
+    [1, 4, 7],
+    [2, 5, 8],
+    [0, 4, 8],
+    [2, 4, 6]
+];
 /*---------------------------- Variables (state) ----------------------------*/
 
 let turn = 'X';
@@ -40,9 +50,9 @@ const render = () => {
 };
 
 const updateBoard = (board, squareEls) => {
-    board.forEach((turn, index) => {
+    board.forEach((cell, index) => {
         const square = squareEls[index];
-        square.textContent = turn;
+        square.textContent = cell;
 
         if (board)
     });
