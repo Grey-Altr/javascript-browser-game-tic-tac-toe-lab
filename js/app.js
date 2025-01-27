@@ -20,8 +20,8 @@ let board = [
     '','',''
     ];
 let turn = 'X';
-let winner;
-let tie;
+let winner = false;
+let tie = false;
 /*---------------------------- Variables (state) ----------------------------*/
 const init = () => {
     console.log('game init');
