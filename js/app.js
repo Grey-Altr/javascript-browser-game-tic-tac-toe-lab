@@ -25,6 +25,7 @@ let tie = false;
 /*---------------------------- Variables (state) ----------------------------*/
 const init = () => {
     console.log('game init');
+    render();
 }
 
 init();
