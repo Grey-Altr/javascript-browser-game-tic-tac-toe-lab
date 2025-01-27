@@ -39,7 +39,7 @@ const render = () => {
 
 };
 
-const updateBoard () => {
+const updateBoard = () => {
 
 };
 
