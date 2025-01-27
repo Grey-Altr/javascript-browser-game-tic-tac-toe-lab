@@ -14,7 +14,11 @@
 //7) Create Reset functionality.
 
 /*-------------------------------- Constants --------------------------------*/
-let board;
+let board = [
+    '','','',
+    '','','',
+    '','',''
+    ];
 let turn;
 let winner;
 let tie;
