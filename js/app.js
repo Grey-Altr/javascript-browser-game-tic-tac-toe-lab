@@ -14,12 +14,12 @@
 //7) Create Reset functionality.
 
 /*-------------------------------- Constants --------------------------------*/
-
-/*---------------------------- Variables (state) ----------------------------*/
 let board;
 let turn;
 let winner;
 let tie;
+/*---------------------------- Variables (state) ----------------------------*/
+
 /*------------------------ Cached Element References ------------------------*/
 const squareEls = document.querySelectorAll('#sqr');
 const messageEl = document.querySelector('#message');
