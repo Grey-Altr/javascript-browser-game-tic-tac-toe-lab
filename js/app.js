@@ -36,6 +36,11 @@ const squareEls = document.querySelectorAll('#sqr');
 const messageEl = document.querySelector('#message');
 /*-------------------------------- Functions --------------------------------*/
 const render = () => {
-    
+
 };
+
+const updateBoard () => {
+
+};
+
 /*----------------------------- Event Listeners -----------------------------*/
