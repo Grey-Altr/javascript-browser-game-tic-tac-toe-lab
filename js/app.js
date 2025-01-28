@@ -56,15 +56,15 @@ const updateBoard = () => {
     });
 };
 
-// const updateMessage = () => {
-//     if (winner === false && tie === false) {
-//         messageEl.textContent = 'It\'s X\'s go!';
-//     } else if (winner === false && tie === true) {
-//         messageEl.textContent = 'It\'s a tie!';
-//     } else {
-//         messageEl.textContent = 'X wins!';
-//     };
-// };
+const updateMessage = () => {
+    if (winner === false && tie === false) {
+        messageEl.textContent = 'It\'s X\'s go!';
+    } else if (winner === false && tie === true) {
+        messageEl.textContent = 'It\'s a tie!';
+    } else {
+        messageEl.textContent = 'X wins!';
+    };
+};
 
 const render = () => {
   updateBoard();
