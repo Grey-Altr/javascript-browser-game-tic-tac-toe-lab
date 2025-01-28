@@ -81,4 +81,4 @@ init();
 
 /*----------------------------- Event Listeners -----------------------------*/
 
-square.addEventListener('click', updateBoard);
+document.addEventListener('click', updateBoard);
