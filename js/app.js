@@ -1,6 +1,6 @@
-//1) Define the required variables used to track the state of the game.
+// --X-- 1) Define the required variables used to track the state of the game.
 
-//2) Store cached element references.
+// --X-- 2) Store cached element references.
 
 //3) Upon loading, the game state should be initialized, and a function should
 //   be called to render this game state.
@@ -14,11 +14,6 @@
 //7) Create Reset functionality.
 
 /*-------------------------------- Constants --------------------------------*/
-let board = [
-    '','','',
-    '','','',
-    '','',''
-    ];
 
 const winningCombos = [
     [0, 1, 2],
@@ -30,32 +25,60 @@ const winningCombos = [
     [0, 4, 8],
     [2, 4, 6]
 ];
+
 /*---------------------------- Variables (state) ----------------------------*/
 
 let turn = 'X';
 let winner = false;
 let tie = false;
 
-const init = () => {
-    window.onload = init;
-    render();
-};
+let board = [
+    'X','O','',
+    '','','',
+    '','',''
+    ];
 
 /*------------------------ Cached Element References ------------------------*/
-const squareEls = document.querySelectorAll('#sqr');
+
+const squareEls = document.querySelectorAll('.sqr');
 const messageEl = document.querySelector('#message');
+
 /*-------------------------------- Functions --------------------------------*/
-const render = () => {
 
-};
-
-const updateBoard = (board, squareEls) => {
-    board.forEach((cell, index) => {
-        const square = squareEls[index];
-        square.textContent = cell;
-
-        if (board)
+const updateBoard = () => {
+    board.forEach((square, index) => {
+        if (square === 'X') {
+            squareEls[index].innerText = 'X';
+        } else if (square === 'O') {
+            squareEls[index].innerText = 'O';
+        }
+        console.log(squareEls[index]);
     });
 };
 
+// const updateMessage = () => {
+//     if (winner === false && tie === false) {
+//         messageEl.textContent = 'It\'s X\'s go!';
+//     } else if (winner === false && tie === true) {
+//         messageEl.textContent = 'It\'s a tie!';
+//     } else {
+//         messageEl.textContent = 'X wins!';
+//     };
+// };
+
+const render = () => {
+  updateBoard();
+  // updateMessage();
+};
+
+const init = () => {
+
+  render();
+};
+
+init();
+
+
 /*----------------------------- Event Listeners -----------------------------*/
+
+square.addEventListener('click', updateBoard);
