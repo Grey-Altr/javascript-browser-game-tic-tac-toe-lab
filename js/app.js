@@ -2,12 +2,12 @@
 
 // --X-- 2) Store cached element references.
 
-//3) Upon loading, the game state should be initialized, and a function should
+// --X-- 3) Upon loading, the game state should be initialized, and a function should
 //   be called to render this game state.
 
-//4) The state of the game should be rendered to the user.
+// --X-- 4) The state of the game should be rendered to the user.
 
-//5) Define the required constants.
+// --X-- 5) Define the required constants.
 
 //6) Handle a player clicking a square with a `handleClick` function.
 
@@ -33,7 +33,7 @@ let winner = false;
 let tie = false;
 
 let board = [
-    'X','O','',
+    '','','',
     '','','',
     '','',''
     ];
@@ -66,13 +66,40 @@ const updateMessage = () => {
     };
 };
 
+squareEls.forEach((square, index) => {
+    square.addEventListener('click', (event) => {
+        handleClick(event, index);
+    });
+    console.log('click');
+});
+
+const handleClick = (event, index) => {
+  const square = event.target;
+
+  if (board[index] !== '') {
+    return;
+  };
+
+  const currentPlayer = turn;
+  square.innerText = turn;
+  board[index] = currentPlayer;
+  square.innerText = currentPlayer;
+
+  if (winner === false && tie === false) {
+    if (turn === 'X') {
+        turn = 'O';
+    } else {
+        turn = 'X';
+    };
+  };
+};
+
 const render = () => {
   updateBoard();
   // updateMessage();
 };
 
 const init = () => {
-
   render();
 };
 
