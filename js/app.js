@@ -86,16 +86,16 @@ const handleClick = (event, index) => {
   board[index] = currentPlayer;
   square.innerText = currentPlayer;
 
-  checkForWinner();
-  checkForTie();
-
+  
   if (winner === false && tie === false) {
-    if (turn === 'X') {
-        turn = 'O';
-    } else {
-        turn = 'X';
+      if (turn === 'X') {
+          turn = 'O';
+        } else {
+            turn = 'X';
+        };
     };
-  };
+    checkForWinner();
+    checkForTie();
 };
 
 
