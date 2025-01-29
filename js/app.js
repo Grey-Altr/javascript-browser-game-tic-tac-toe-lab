@@ -107,6 +107,12 @@ const checkForWinner = () => {
     };
 };
 
+const checkForTie = () => {
+    if (board.every((square) => square !== '') && winner === false) {
+        tie = true;
+    };
+};
+
 const render = () => {
   updateBoard();
   // updateMessage();
