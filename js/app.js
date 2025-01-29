@@ -42,6 +42,7 @@ let board = [
 
 const squareEls = document.querySelectorAll('.sqr');
 const messageEl = document.querySelector('#message');
+const resetBtmEl = document.querySelector('#reset');
 
 /*-------------------------------- Functions --------------------------------*/
 
@@ -116,7 +117,7 @@ const checkForTie = () => {
 
 const render = () => {
   updateBoard();
-  // updateMessage();
+  updateMessage();
 };
 
 const init = () => {
@@ -129,3 +130,4 @@ init();
 /*----------------------------- Event Listeners -----------------------------*/
 
 document.addEventListener('click', updateBoard);
+document.addEventListener('click', init);
