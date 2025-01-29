@@ -86,6 +86,7 @@ const handleClick = (event, index) => {
   square.innerText = currentPlayer;
 
   checkForWinner();
+  checkForTie();
 
   if (winner === false && tie === false) {
     if (turn === 'X') {
