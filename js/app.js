@@ -85,6 +85,8 @@ const handleClick = (event, index) => {
   board[index] = currentPlayer;
   square.innerText = currentPlayer;
 
+  checkForWinner();
+
   if (winner === false && tie === false) {
     if (turn === 'X') {
         turn = 'O';
@@ -92,6 +94,17 @@ const handleClick = (event, index) => {
         turn = 'X';
     };
   };
+};
+
+
+const checkForWinner = () => {
+    for (const combo of combos) {
+        const [a, b, c ] = combo;
+        if (board[a] && board[a] == board[b] && board[a] === board[c]) {
+            winner = true;
+            return;
+        };
+    };
 };
 
 const render = () => {
