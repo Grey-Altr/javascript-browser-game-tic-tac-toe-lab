@@ -100,7 +100,7 @@ const handleClick = (event, index) => {
 
 
 const checkForWinner = () => {
-    for (const combo of combos) {
+    for (const combo of winningCombos) {
         const [a, b, c ] = combo;
         if (board[a] && board[a] == board[b] && board[a] === board[c]) {
             winner = true;
